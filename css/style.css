@@ -2,29 +2,32 @@ body {
     background: skyblue;
  }
  .light {
-   width: 10px;
-   height: 10px;
-   background: red;
-   border-radius: 50%;
-      bottom: -100px;
-   position: absolute;
-   z-index: 10;
-   left: 20px;
-   animation:  ease-in-out 0s infinite alternate;
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  animation-name: drive;
+  animation-duration: 7s;
+  animation-fill-mode: both;
+  animation-iteration-count:infinite
+  
+  
  }
- .cloud {
-   position: absolute;
-   top: 0px;
-   right: -500px;
-   opacity: .8;
-    animation: cloud 10s linear 0s infinite reverse;
-   z-index: 99;
- }
+.cloud {
+  position: absolute;
+  top: 0px;
+  right: -500px;
+  
+   animation: cloud 10s linear 0s infinite reverse;
+  z-index: 99;
+}
+
  @keyframes light {
-   0% {opacity: 0;}
-   100% {opacity: 1;}
+  from{ transform: translateX(-200px)}
+  to{ transform: translate(1000px)}
  }
  @keyframes cloud {
    from {right:-500px;}
    to {right: 102%;}
  }
+
+ 
